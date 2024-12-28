@@ -15,8 +15,14 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error(err));
 
+  // Import Routes
+const usersRoutes = require("./routes/users");
+const selfAssessmentRoutes = require("./routes/selfAssessment");
+
 // Routes
 app.get("/", (req, res) => res.send("Backend is running..."));
+app.use("/api/users", usersRoutes);
+app.use("/api/self-assessment", selfAssessmentRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
