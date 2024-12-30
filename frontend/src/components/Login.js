@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Hook for navigation after login
+import "./Login.css";  // Import CSS file
+
 
 function Login() {
   const [email, setEmail] = useState(""); // State for storing email
