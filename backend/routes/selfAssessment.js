@@ -6,7 +6,7 @@ const router = express.Router();
 
 // Submit self-assessment
 router.post("/", async (req, res) => {
-  const { leadershipSkills } = req.body;
+  const { leadershipSkills, userId, comments } = req.body;
 
   try {
     // Create a new assessment entry
