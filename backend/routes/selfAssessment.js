@@ -26,6 +26,11 @@ router.post("/", async (req, res) => {
   const { leadershipSkills, userId, comments } = req.body;
 
   try {
+
+    // Convert userId to ObjectId if it is a valid ObjectId string
+    // const validUserId = mongoose.Types.ObjectId(userId);
+
+
     // Create a new assessment entry
     const newAssessment = new Assessment({
       userId,
