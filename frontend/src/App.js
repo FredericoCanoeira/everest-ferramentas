@@ -1,24 +1,64 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Componentes
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Form from "./components/Form";
-import Results from "./pages/Results";
+
+// Páginas
 import Home from "./pages/Home";
+import Results from "./pages/Results";
 import SelfAssessment from "./pages/SelfAssessment";
+import NotFound from "./pages/NotFound";
+
+// Layout
+import Layout from "./components/common/Layout";
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Rotas existentes */}
+        {/* Rotas públicas */}
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/form" element={<Form />} />
-        <Route path="/results" element={<Results />} />
-        {/* Novas rotas */}
-        <Route path="/home" element={<Home />} />
-        <Route path="/self-assessment" element={<SelfAssessment />} />
+
+        {/* Rotas protegidas (com layout) */}
+        <Route
+          path="/form"
+          element={
+            <Layout>
+              <Form />
+            </Layout>
+          }
+        />
+        <Route
+          path="/results"
+          element={
+            <Layout>
+              <Results />
+            </Layout>
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/self-assessment"
+          element={
+            <Layout>
+              <SelfAssessment />
+            </Layout>
+          }
+        />
+
+        {/* Página 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
