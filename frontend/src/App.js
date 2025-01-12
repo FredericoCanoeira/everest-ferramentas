@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Form from "./components/Form";
+import AssessmentForm from './components/assessment/AssessmentForm';
 
 // Páginas
 import Home from "./pages/Home";
@@ -53,6 +54,14 @@ function App() {
           element={
             <Layout>
               <SelfAssessment />
+            </Layout>
+          }
+        />
+        <Route
+          path="/assessment"
+          element={
+            <Layout>
+              <AssessmentForm />
             </Layout>
           }
         />
