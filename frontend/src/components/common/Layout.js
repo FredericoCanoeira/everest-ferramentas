@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     <div>
       {/* Cabeçalho */}
       <header style={styles.header}>
-        <h1>Minha Aplicação</h1>
+        <h1>Everest Assessment</h1>
         <nav style={styles.nav}>
           <a href="/" style={styles.link}>Login</a>
           <a href="/register" style={styles.link}>Registrar</a>
@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
 
       {/* Rodapé */}
       <footer style={styles.footer}>
-        <p>© 2025 Minha Aplicação</p>
+        <p>© 2025 Everest Assessment</p>
       </footer>
     </div>
   );
