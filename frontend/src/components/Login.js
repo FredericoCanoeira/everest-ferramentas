@@ -33,27 +33,27 @@ function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)} // Update email state
               required
-              placeholder="Enter your email"
+              placeholder="Digita seu email"
             />
           </div>
           <div className="input-group">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Senha:</label>
             <input
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)} // Update password state
               required
-              placeholder="Enter your password"
+              placeholder="Digite sua senha"
             />
           </div>
           <div className="button-group">
-            <button type="submit" className="btn-login">Login</button>
+            <button type="Acessar" className="btn-login">Login</button>
           </div>
         </form>
         <div className="auth-options">
-          <a href="/register" className="auth-link">Create an account</a>
-          <a href="/forgot-password" className="auth-link">Forgot password?</a>
+          <a href="/register" className="auth-link">Criar uma conta</a>
+          <a href="/forgot-password" className="auth-link">Recuperar senha</a>
         </div>
       </div>
     </div>
