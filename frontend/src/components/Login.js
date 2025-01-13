@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Hook for navigation after login
+import { Link } from "react-router-dom"; // Import Link component from react-router-dom
 import "../styles/Login.css"; // Import CSS file
 
 function Login() {
@@ -33,7 +34,7 @@ function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)} // Update email state
               required
-              placeholder="Digita seu email"
+              placeholder="Digite seu email"
             />
           </div>
           <div className="input-group">
@@ -48,12 +49,12 @@ function Login() {
             />
           </div>
           <div className="button-group">
-            <button type="Acessar" className="btn-login">Login</button>
+            <button type="submit" className="btn-login">Acessar</button>
           </div>
         </form>
         <div className="auth-options">
-          <a href="/register" className="auth-link">Criar uma conta</a>
-          <a href="/forgot-password" className="auth-link">Recuperar senha</a>
+          <p>Não tem uma conta? <Link to="/register" className="auth-link">Criar uma conta</Link></p>
+          <p>Esqueceu sua senha? <Link to="/forgot-password" className="auth-link">Recuperar senha</Link></p>
         </div>
       </div>
     </div>
@@ -61,4 +62,3 @@ function Login() {
 }
 
 export default Login;
-
