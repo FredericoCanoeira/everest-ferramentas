@@ -6,7 +6,7 @@ const Home = () => {
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>Everest Tools</h1>
       <p>Bem-vindo à ferramenta de autoavaliação de liderança!</p>
-      <Link to="/self-assessment">
+      <Link to="/assessment">
         <button>Iniciar Autoavaliação</button>
       </Link>
     </div>

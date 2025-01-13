@@ -7,13 +7,13 @@ const Layout = ({ children }) => {
       <header style={styles.header}>
         <h1>Everest Assessment</h1>
         <nav style={styles.nav}>
+          <a href="/home" style={styles.link}>Início</a>
+          <a href="/Dashboard" style={styles.link}>Dashboard</a>
+          <a href="/assessment" style={styles.link}>Realizar o teste</a>
+          <a href="/results" style={styles.link}>Ranking</a>
+          <a href="/results" style={styles.link}>Resultados</a>
           <a href="/" style={styles.link}>Login</a>
           <a href="/register" style={styles.link}>Registrar</a>
-          <a href="/form" style={styles.link}>Formulário</a>
-          <a href="/results" style={styles.link}>Resultados</a>
-          <a href="/home" style={styles.link}>Início</a>
-          <a href="/self-assessment" style={styles.link}>Autoavaliação</a>
-          <a href="/assessment" style={styles.link}>Avaliação</a>
         </nav>
       </header>
 

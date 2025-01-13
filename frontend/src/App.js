@@ -11,6 +11,7 @@ import AssessmentForm from './components/assessment/AssessmentForm';
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
+import Dashboard from "./pages/Dashboard";
 
 // Layout
 import Layout from "./components/common/Layout";
@@ -56,7 +57,14 @@ function App() {
             </Layout>
           }
         />
-
+        <Route
+          path="/Dashboard"
+          element={
+            <Layout>
+              <Dashboard />
+            </Layout>
+          }
+        />
         {/* Página 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
