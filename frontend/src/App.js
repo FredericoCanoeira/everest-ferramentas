@@ -10,7 +10,6 @@ import AssessmentForm from './components/assessment/AssessmentForm';
 // Páginas
 import Home from "./pages/Home";
 import Results from "./pages/Results";
-import SelfAssessment from "./pages/SelfAssessment";
 import NotFound from "./pages/NotFound";
 
 // Layout
@@ -46,14 +45,6 @@ function App() {
           element={
             <Layout>
               <Home />
-            </Layout>
-          }
-        />
-        <Route
-          path="/self-assessment"
-          element={
-            <Layout>
-              <SelfAssessment />
             </Layout>
           }
         />
