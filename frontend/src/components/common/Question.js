@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "./Question.css";
 
 const Question = ({ question, options, onAnswer }) => {
@@ -16,6 +16,27 @@ const Question = ({ question, options, onAnswer }) => {
           </button>
         ))}
       </div>
+    </div>
+  );
+};
+
+export default Question;*/
+
+import React from "react";
+import "./Question.css";
+
+const Question = ({ question, options, onAnswer }) => {
+  return (
+    <div className="question">
+      <h4>{question}</h4>
+      <ul>
+        {options.map((option, index) => (
+          <li key={index}>
+            {/* Exibir apenas o texto da opção */}
+            <button onClick={() => onAnswer(option)}>{option.text}</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
