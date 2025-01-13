@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Hook for navigation after login
-import "../styles/Login.css";  // Import CSS file
-
+import "../styles/Login.css"; // Import CSS file
 
 function Login() {
   const [email, setEmail] = useState(""); // State for storing email
@@ -23,32 +22,43 @@ function Login() {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} // Update email state
-            required
-          />
+      <div className="login-box">
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <div className="input-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)} // Update email state
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)} // Update password state
+              required
+              placeholder="Enter your password"
+            />
+          </div>
+          <div className="button-group">
+            <button type="submit" className="btn-login">Login</button>
+          </div>
+        </form>
+        <div className="auth-options">
+          <a href="/register" className="auth-link">Create an account</a>
+          <a href="/forgot-password" className="auth-link">Forgot password?</a>
         </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)} // Update password state
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+      </div>
     </div>
   );
 }
 
 export default Login;
+
