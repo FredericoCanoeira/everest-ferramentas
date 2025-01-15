@@ -65,6 +65,7 @@ const AssessmentForm = () => {
   const [isCompleted, setIsCompleted] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
   const [category, setCategory] = useState(""); // Novo estado para a categoria
+  const [followUpAnswer, setFollowUpAnswer] = useState(""); // Armazenar respostas de follow-up
 
   const competenciesKeys = Object.keys(competencies);
   const currentCompetency = competenciesKeys[currentCompetencyIndex];
@@ -78,8 +79,10 @@ const AssessmentForm = () => {
       questionId: currentQuestion.id,
       answer: answer.text,
       points: answer.points,
+      followUpAnswer: followUpAnswer || null, // Inclui a resposta de follow-up se aplicável
     });
     setAnswers(updatedAnswers);
+    setFollowUpAnswer(""); // Reseta o follow-up para a próxima questão
 
     if (currentQuestionIndex < currentQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -134,8 +137,26 @@ const AssessmentForm = () => {
             options={currentQuestion.options}
             onAnswer={handleAnswer}
           />
-        </>
-      ) : (
+          {currentQuestion.options.some((opt) => opt.followUp) && (
+          <div className="follow-up">
+            <p>{currentQuestion.options.find((opt) => opt.text === "Sim")?.followUp}</p>
+            {currentQuestion.options.find((opt) => opt.inputType === "textarea") && (
+              <textarea
+                value={followUpAnswer}
+                onChange={(e) => setFollowUpAnswer(e.target.value)}
+                placeholder="Digite sua resposta aqui"
+              />
+            )}
+            {currentQuestion.options.find((opt) => opt.inputType === "file") && (
+              <input
+                type="file"
+                onChange={(e) => setFollowUpAnswer(e.target.files[0]?.name || "")}
+              />
+            )}
+          </div>
+        )}
+      </>
+       ) : (
         <div className="results">
           <h2>Resultado Final</h2>
           {/* Exibe a pontuação em porcentagem */}
