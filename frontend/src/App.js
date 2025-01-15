@@ -26,7 +26,7 @@ function App() {
     <Router>
       <Routes>
         {/* Rotas públicas */}
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
 
         {/* Rotas protegidas (com layout) */}
@@ -47,10 +47,10 @@ function App() {
           }
         />
         <Route
-          path="/Home"
+          path="/Login"
           element={
             <Layout>
-              <Home />
+              <Login />
             </Layout>
           }
         />
