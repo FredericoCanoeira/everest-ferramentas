@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Everest Tools</h1>
-      <p>Bem-vindo à ferramenta de autoavaliação de liderança!</p>
+      <h1>Auto-avaliação de Liderança</h1>
+      <p>Seja bem-vindo!</p>
       <Link to="/assessment">
-        <button>Iniciar Autoavaliação</button>
+      {/* <button>Iniciar Autoavaliação</button> */}
       </Link>
     </div>
   );

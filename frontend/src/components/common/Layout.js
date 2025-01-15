@@ -5,15 +5,15 @@ const Layout = ({ children }) => {
     <div>
       {/* Cabeçalho */}
       <header style={styles.header}>
-        <h1>Everest Assessment</h1>
+        {/* <h1>Everest Assessment</h1>*/}
         <nav style={styles.nav}>
-          <a href="/home" style={styles.link}>Início</a>
-          <a href="/Dashboard" style={styles.link}>Dashboard</a>
+        <a href="/home" style={styles.link}>Início</a>
+          {/*<a href="/Dashboard" style={styles.link}>Dashboard</a>*/}
           <a href="/assessment" style={styles.link}>Realizar o teste</a>
-          <a href="/results" style={styles.link}>Ranking</a>
-          <a href="/results" style={styles.link}>Resultados</a>
-          <a href="/" style={styles.link}>Login</a>
-          <a href="/register" style={styles.link}>Registrar</a>
+          {/* <a href="/results" style={styles.link}>Ranking</a>*/}
+          {/* <a href="/results" style={styles.link}>Resultados</a>*/}
+        {/* <a href="/" style={styles.link}>Login</a>*/}
+         {/* <a href="/register" style={styles.link}>Registrar</a> */}
         </nav>
       </header>
 
@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
 
       {/* Rodapé */}
       <footer style={styles.footer}>
-        <p>© 2025 Everest Assessment</p>
+        <p>© 2025 Everest</p>
       </footer>
     </div>
   );
