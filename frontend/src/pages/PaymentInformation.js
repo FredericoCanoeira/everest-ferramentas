@@ -10,7 +10,7 @@ const PaymentInformation = () => {
     if (answer === 'sim') {
       navigate('/solicitacao');  // Redireciona para a página de solicitação
     } else {
-      navigate('/Home');  // Redireciona para a página inicial
+      navigate('/');  // Redireciona para a página inicial
     }
   };
 

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./AssessmentForm.css";
 import Question from "../common/Question";
+import { useNavigate } from "react-router-dom";
+
 
 // Objeto com as competências e questões integradas
 const competencies = {
@@ -67,6 +69,8 @@ const AssessmentForm = () => {
   const [category, setCategory] = useState(""); // Novo estado para a categoria
   const [followUpAnswer, setFollowUpAnswer] = useState(""); // Armazenar respostas de follow-up
 
+  const navigate = useNavigate(); // Inicializa o hook useNavigate
+
   const competenciesKeys = Object.keys(competencies);
   const currentCompetency = competenciesKeys[currentCompetencyIndex];
   const currentQuestions = competencies[currentCompetency];
@@ -117,15 +121,10 @@ const AssessmentForm = () => {
       setIsCompleted(true);
     }
   };
-
-  const restartAssessment = () => {
-    setCurrentCompetencyIndex(0);
-    setCurrentQuestionIndex(0);
-    setAnswers([]);
-    setIsCompleted(false);
-    setFinalScore(0);
-    setCategory("");
+  const handleRedirectToPayment = () => {
+    navigate("/PaymentInformation"); // Redireciona para a página de pagamento
   };
+
 
   return (
     <div className="assessment-form">
@@ -156,7 +155,7 @@ const AssessmentForm = () => {
           </div>
         )}
       </>
-       ) : (
+      ) : (
         <div className="results">
           <h2>Resultado Final</h2>
           {/* Exibe a pontuação em porcentagem */}
@@ -169,7 +168,8 @@ const AssessmentForm = () => {
               ? "Bom trabalho! Você possui uma boa base de liderança, mas pode melhorar."
               : "Nível inicial. Você Precisa desenvolver diversas competências."}
           </p>
-          <button onClick={restartAssessment}>
+          
+          <button onClick={handleRedirectToPayment}>
             Solicitar o relatório completo para conhecer os seus pontos fortes e áreas que necessita melhorar</button>
         </div>
       )}
