@@ -6,13 +6,17 @@ import "../src/styles/App.css"
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Form from "./components/Form";
-import AssessmentForm from './components/assessment/AssessmentForm';
+import AssessmentForm from "./components/assessment/AssessmentForm";
+
 
 // Páginas
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
+import PaymentInformation from "./pages/PaymentInformation";
+import Solicitacao from "./pages/Solicitacao";
+
 
 // Layout
 import Layout from "./components/common/Layout";
@@ -43,7 +47,7 @@ function App() {
           }
         />
         <Route
-          path="/home"
+          path="/Home"
           element={
             <Layout>
               <Home />
@@ -57,6 +61,22 @@ function App() {
               <AssessmentForm />
             </Layout>
           }
+          />
+        <Route
+          path="/PaymentInformation"
+          element={
+            <Layout>
+            <PaymentInformation />
+            </Layout>
+          } 
+        />
+        <Route
+          path="/Solicitacao"
+          element={
+            <Layout>
+            <Solicitacao />
+            </Layout>
+          } 
         />
         <Route
           path="/Dashboard"
