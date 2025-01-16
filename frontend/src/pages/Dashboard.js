@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import AuthContext from '../context/AuthContext'
+
 
 const Dashboard = () => {
   const [userId, setUserId] = useState('');
   const [report, setReport] = useState(null);
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+// Proteção para redirecionar se o usuário não for admin
+if (!user?.isAdmin) {
+  navigate('/login'); // Redireciona para a página de login
+  return null; // Retorna null para não renderizar o componente
+};
 
   const fetchReport = async () => {
     try {
