@@ -1,15 +1,21 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Layout = ({ children }) => {
+  const location = useLocation();
+
   return (
     <div>
       {/* Cabeçalho */}
       <header style={styles.header}>
           {/*<h1>Everest Assessment</h1>*/}
         <nav style={styles.nav}>
+           {/* Exibe "Realizar o teste" somente na página inicial ("/") */}
+           {location.pathname === "/" && (
+            <a href="/assessment" style={styles.link}>Realizar o teste</a>
+          )}
         {/*<a href="/home" style={styles.link}>Início</a>*/}
             {/*<a href="/Dashboard" style={styles.link}>Dashboard</a>*/}
-          <a href="/assessment" style={styles.link}>Realizar o teste</a>
             {/*<a href="/results" style={styles.link}>Ranking</a>*/}
             {/*<a href="/results" style={styles.link}>Resultados</a>*/}
           {/*<a href="/" style={styles.link}>Login</a>*/}
