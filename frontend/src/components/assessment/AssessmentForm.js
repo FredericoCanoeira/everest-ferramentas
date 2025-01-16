@@ -324,13 +324,15 @@ const AssessmentForm = () => {
     <div className="assessment-form">
       {!isCompleted ? (
         <>
-          <h3>Competência: {currentCompetency}</h3>
+          <h3 className="competency-title">Competência: {currentCompetency}</h3>
           {!showFollowUp ? (
+            <div className="question-container">
             <Question
               question={currentQuestion.text}
               options={currentQuestion.options}
               onAnswer={handleAnswer}
             />
+            </div>
           ) : (
             // Renderiza apenas o follow-up (campo adicional)
             <div className="follow-up">
@@ -359,7 +361,7 @@ const AssessmentForm = () => {
           <p>Sua pontuação total: {finalScore}%</p>
           <p>Classificação: <strong>{category}</strong></p>
           <p>{categoryMessage}</p> {/* Exibe a mensagem correspondente à categoria */}
-          <button onClick={handleRedirectToPayment}>
+          <button className="final-result-button" onClick={handleRedirectToPayment}>
             Solicitar o relatório completo para conhecer os seus pontos fortes e áreas que necessita melhorar
           </button>
         </div>
