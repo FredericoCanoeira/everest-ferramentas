@@ -1,17 +1,14 @@
 /* styles.css */
+
+/* Garantir que o conteúdo da página não tenha rolagem lateral */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
