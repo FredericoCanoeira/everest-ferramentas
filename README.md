@@ -1,7 +1,7 @@
 # Everest Ferramentas
 
 **Descrição:**  
-Everest Ferramentas é uma aplicação web desenvolvida para [descreva aqui o propósito do seu projeto, por exemplo, "gerenciar o estoque de ferramentas de uma oficina mecânica"].
+Everest Ferramentas é uma aplicação web desenvolvida para autoavaliação de liderança. atraves de perguntas baseadas em habilidades e competências de liderança serao classificadas em diferentes áreas de liderança.
 
 ## Tecnologias Utilizadas
 
