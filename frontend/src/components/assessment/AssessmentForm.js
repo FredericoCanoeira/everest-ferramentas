@@ -280,7 +280,7 @@ const AssessmentForm = () => {
       // Determina a categoria com base na pontuação
       let finalCategory = "";
       let message = "";
-      if (totalScore >= 80) {
+      if (totalScore >= 95) {
         finalCategory = "Líder Everest";
         message = "Parabéns! Você demonstrou competências de liderança extraordinárias.";
       } else if (totalScore >= 49) {
