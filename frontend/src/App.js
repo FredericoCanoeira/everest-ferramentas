@@ -14,7 +14,7 @@ import AssessmentForm from "./components/assessment/AssessmentForm";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
-import Dashboard from "./pages/Dashboard";
+//import Dashboard from "./pages/Dashboard";
 import PaymentInformation from "./pages/PaymentInformation";
 import Solicitacao from "./pages/Solicitacao";
 import Obrigado from "./pages/Obrigado"
@@ -95,14 +95,14 @@ function App() {
           }
         />
 
-        <Route
+        {/*<Route
           path="/dashboard"
           element={
             <PrivateRoute adminOnly={true}>
               <Dashboard />
             </PrivateRoute>
           }
-        />
+        />*/}
         {/* Página 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
