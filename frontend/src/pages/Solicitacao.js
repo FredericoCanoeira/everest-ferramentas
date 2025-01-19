@@ -33,8 +33,8 @@ const Solicitacao = () => {
     console.log('Dados enviados:', formData);
     console.log('ID gerado:', generatedId);
 
-    // Depois de enviar, redireciona para outra página, 
-    navigate('/');
+    // Redirecionar para a página /obrigado após o envio bem-sucedido 
+    navigate('/obrigado');
   };
 
   return (
