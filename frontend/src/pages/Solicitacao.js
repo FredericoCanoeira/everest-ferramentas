@@ -10,16 +10,39 @@ const Solicitacao = () => {
     email: ''
   });
   const [uniqueId, setUniqueId] = useState('');
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true); // Estado para controlar o botão
   const navigate = useNavigate();
+
+  // Verifica se todos os campos estão preenchidos
+  const validateForm = (data) => {
+    return (
+      data.nome.trim() !== '' &&
+      data.telefone.trim() !== '' &&
+      data.bi.trim() !== '' &&
+      data.email.trim() !== ''
+    );
+  };
 
   // Função para lidar com a mudança nos campos do formulário
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
+
+    // Validação para o campo de telefone: aceita apenas números e o sinal '+'
+    if (name === 'telefone' && !/^[\d+]*$/.test(value)) {
+      return; // Não atualiza o estado se o valor não for válido
+    }
+
+    const updatedFormData = {
       ...formData,
       [name]: value,
-    });
+    };
+
+    setFormData(updatedFormData);
+
+    // Ativa ou desativa o botão de enviar com base na validação
+    setIsButtonDisabled(!validateForm(updatedFormData));
   };
+
 
   // Função para enviar os dados e gerar um ID único
   const handleSubmit = (e) => {
