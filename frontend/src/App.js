@@ -17,6 +17,8 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import PaymentInformation from "./pages/PaymentInformation";
 import Solicitacao from "./pages/Solicitacao";
+import Obrigado from "./pages/Obrigado"
+
 
 
 // Layout
@@ -85,6 +87,14 @@ function App() {
             </Layout>
           } 
         />
+
+        <Route
+          path="/obrigado" 
+          element={
+          <Obrigado />
+          }
+        />
+
         <Route
           path="/dashboard"
           element={
