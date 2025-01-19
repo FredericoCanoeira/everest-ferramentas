@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "../src/styles/App.css"
+import PrivateRoute from './components/common/PrivateRoute'
 
 // Componentes
 import Login from "./components/Login";
@@ -85,11 +86,11 @@ function App() {
           } 
         />
         <Route
-          path="/Dashboard"
+          path="/dashboard"
           element={
-            <Layout>
+            <PrivateRoute adminOnly={true}>
               <Dashboard />
-            </Layout>
+            </PrivateRoute>
           }
         />
         {/* Página 404 */}
