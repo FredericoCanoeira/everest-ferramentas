@@ -6,8 +6,20 @@ const reportSchema = new mongoose.Schema({
     ref: 'User', // Assumindo que você tem um modelo de usuário
     required: true,
   },
-  content: {
+  name: {
     type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
+  score: {
+    type: Number,
     required: true,
   },
   createdAt: {

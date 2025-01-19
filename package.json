@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "pdfkit": "^0.16.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
