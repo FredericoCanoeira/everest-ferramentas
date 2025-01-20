@@ -34,9 +34,15 @@ function DashboardOverview() {
   return (
     <SoftBox p={2}>
       <Grid container spacing={3}>
-        <Grid item xs={12} md={3}>
-          <SoftBox>Total Users: {totalUsers}</SoftBox>
-        </Grid>
+      <Grid item xs={12} md={3}>
+  <SoftBox>
+    <p>Total Users: {totalUsers}</p>
+    <p>Reviews: {totalReviews}</p>
+    <p>Growth: {growthPercentage}%</p>
+    <p>Average Score: {averageScore}</p>
+  </SoftBox>
+</Grid>
+
         <Grid item xs={12} md={6}>
           <Pie data={pieData} />
         </Grid>
