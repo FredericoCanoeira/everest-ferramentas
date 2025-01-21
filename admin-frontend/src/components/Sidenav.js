@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, Box } from "@mui/material";
 import { Home, Group, BarChart, Assessment, AttachMoney, Settings } from "@mui/icons-material";
 import "../assets/style/Sidenav.css";
+import EverestLogo from "../assets/images/logo-dark.png";
 
 function Sidenav() {
   return (
@@ -11,8 +12,15 @@ function Sidenav() {
       className="sidenav-drawer"
       classes={{ paper: "sidenav-paper" }}
     >
+
+            {/* Adicionado o logo da Everest */}
+            <Box className="sidenav-header" sx={{ textAlign: "center", padding: "20px 0" }}>
+          <img src={EverestLogo} alt="Everest Logo" style={{ maxWidth: "80%" }} />
+        </Box>
+
+
       <Box className="sidenav-header">
-        <h2>Admin Dashboard</h2>
+        <h2>Painel de administração</h2>
       </Box>
       <List className="sidenav-list">
         <ListItem button component={Link} to="/">

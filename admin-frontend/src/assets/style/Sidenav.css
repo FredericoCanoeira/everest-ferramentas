@@ -1,8 +1,14 @@
-/* src/assets/css/Sidenav.css */
 .sidenav-paper {
   width: 240px;
   background-color: #3A416F;
   color: white;
+}
+
+.sidenav-header {
+  font-size: 9px;
+  color: #3A416F;
+  text-align: center;
+  padding-top: -170%;
 }
 
 .sidenav-drawer {

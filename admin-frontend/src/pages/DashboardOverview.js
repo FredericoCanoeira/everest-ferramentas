@@ -56,7 +56,7 @@ function DashboardOverview() {
   return (
     <SoftBox p={2}>
       <Typography variant="h4" fontWeight="bold" gutterBottom>
-        Dashboard Overview
+        Visao geral
       </Typography>
       <Grid container spacing={3}>
         {/* Total de Usuários */}
@@ -70,7 +70,7 @@ function DashboardOverview() {
           >
             <CardContent>
               <Typography variant="h6" color="textSecondary">
-                Total Users
+                Total de Usuários
               </Typography>
               <Typography
                 variant="h4"
@@ -95,7 +95,7 @@ function DashboardOverview() {
           >
             <CardContent>
               <Typography variant="h6" color="textSecondary">
-                Reviews
+              Avaliações
               </Typography>
               <Typography
                 variant="h4"
@@ -120,7 +120,7 @@ function DashboardOverview() {
           >
             <CardContent>
               <Typography variant="h6" color="textSecondary">
-                Growth (%)
+                Crescimento do App (%)
               </Typography>
               <Typography
                 variant="h4"
@@ -145,7 +145,7 @@ function DashboardOverview() {
           >
             <CardContent>
               <Typography variant="h6" color="textSecondary">
-                Average Score
+                Score medio
               </Typography>
               <Typography
                 variant="h4"
@@ -169,7 +169,7 @@ function DashboardOverview() {
           >
             <CardContent>
               <Typography variant="h6" color="textSecondary" gutterBottom>
-                Categoria de Usuários
+                Categoria de lideres
               </Typography>
               <Pie data={pieData} />
             </CardContent>

@@ -4,6 +4,7 @@ import Sidenav from "./components/Sidenav";
 import DashboardOverview from "./pages/DashboardOverview";
 import "./assets/style/Layout.css";
 import Footer from "./components/Footer";
+//import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
