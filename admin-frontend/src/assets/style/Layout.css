@@ -1,0 +1,17 @@
+.app-container {
+    display: flex;
+  }
+  
+  .main-content {
+    margin-left: 240px;
+    padding: 16px;
+    width: calc(100% - 240px);
+  }
+  
+  @media (max-width: 600px) {
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  

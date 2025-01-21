@@ -14,7 +14,7 @@ import {
   LineElement,
 } from "chart.js";
 
-// Registro dos elementos do Chart.js
+// Registrar elementos do Chart.js
 ChartJS.register(
   ArcElement,
   Tooltip,
@@ -58,76 +58,131 @@ function DashboardOverview() {
       <Typography variant="h4" fontWeight="bold" gutterBottom>
         Dashboard Overview
       </Typography>
-
       <Grid container spacing={3}>
-        {/* Cartões de Métricas */}
-        <Grid item xs={12} md={3}>
-          <Card>
+        {/* Total de Usuários */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Card
+            sx={{
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              borderRadius: "12px",
+              height: "150px", // Ajuste consistente para altura
+            }}
+          >
             <CardContent>
               <Typography variant="h6" color="textSecondary">
-                Total usuários
+                Total Users
               </Typography>
-              <Typography variant="h4" color="primary" fontWeight="bold">
+              <Typography
+                variant="h4"
+                color="primary"
+                fontWeight="bold"
+                sx={{ marginTop: "16px" }}
+              >
                 {totalUsers}
               </Typography>
             </CardContent>
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={3}>
-          <Card>
+        {/* Avaliações */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Card
+            sx={{
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              borderRadius: "12px",
+              height: "150px",
+            }}
+          >
             <CardContent>
               <Typography variant="h6" color="textSecondary">
-              Quantidade de avaliações
+                Reviews
               </Typography>
-              <Typography variant="h4" color="success" fontWeight="bold">
+              <Typography
+                variant="h4"
+                color="success"
+                fontWeight="bold"
+                sx={{ marginTop: "16px" }}
+              >
                 {totalReviews}
               </Typography>
             </CardContent>
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={3}>
-          <Card>
+        {/* Crescimento */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Card
+            sx={{
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              borderRadius: "12px",
+              height: "150px",
+            }}
+          >
             <CardContent>
               <Typography variant="h6" color="textSecondary">
-              Crescimento do app (%)
+                Growth (%)
               </Typography>
-              <Typography variant="h4" color="warning" fontWeight="bold">
+              <Typography
+                variant="h4"
+                color="warning"
+                fontWeight="bold"
+                sx={{ marginTop: "16px" }}
+              >
                 {growthPercentage}%
               </Typography>
             </CardContent>
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={3}>
-          <Card>
+        {/* Pontuação Média */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Card
+            sx={{
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              borderRadius: "12px",
+              height: "150px",
+            }}
+          >
             <CardContent>
               <Typography variant="h6" color="textSecondary">
-              Pontuação média global
+                Average Score
               </Typography>
-              <Typography variant="h4" color="error" fontWeight="bold">
+              <Typography
+                variant="h4"
+                color="error"
+                //fontWeight="bold"
+                sx={{ marginTop: "16px" }}
+              >
                 {averageScore}
               </Typography>
             </CardContent>
           </Card>
         </Grid>
 
-        {/* Gráfico de Pizza */}
+        {/* Gráficos */}
         <Grid item xs={12} md={6}>
-          <Card>
+          <Card
+            sx={{
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              borderRadius: "12px",
+            }}
+          >
             <CardContent>
               <Typography variant="h6" color="textSecondary" gutterBottom>
-                Percentagem de lideres em cada categoria
+                Categoria de Usuários
               </Typography>
               <Pie data={pieData} />
             </CardContent>
           </Card>
         </Grid>
 
-        {/* Gráfico de Linha */}
         <Grid item xs={12} md={6}>
-          <Card>
+          <Card
+            sx={{
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              borderRadius: "12px",
+            }}
+          >
             <CardContent>
               <Typography variant="h6" color="textSecondary" gutterBottom>
                 Avaliações ao longo do tempo
