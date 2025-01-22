@@ -145,13 +145,14 @@ function DashboardOverview() {
           >
             <CardContent>
               <Typography variant="h6" color="textSecondary">
-                Score medio
+              Score médio global
               </Typography>
               <Typography
                 variant="h4"
                 color="error"
+
                 //fontWeight="bold"
-                sx={{ marginTop: "16px" }}
+                sx={{ marginTop: "2px" }}
               >
                 {averageScore}
               </Typography>

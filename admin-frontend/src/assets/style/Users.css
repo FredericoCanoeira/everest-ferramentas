@@ -1,0 +1,26 @@
+/* Estilos para o card da barra de pesquisa e filtros */
+.users-filters {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Botão de limpar filtros */
+  .users-filters .clear-button {
+    text-align: right;
+  }
+  
+  /* Estilos para o card da tabela */
+  .users-table {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .users-table .table-header {
+    font-weight: bold;
+    color: #3A416F;
+  }
+  
