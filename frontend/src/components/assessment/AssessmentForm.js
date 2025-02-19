@@ -362,7 +362,7 @@ const AssessmentForm = () => {
           <p>Classificação: <strong>{category}</strong></p>
           <p>{categoryMessage}</p> {/* Exibe a mensagem correspondente à categoria */}
           <button className="final-result-button" onClick={handleRedirectToPayment}>
-            Solicitar o relatório completo para conhecer os seus pontos fortes e áreas que necessita melhorar
+            Solicitar o relatório completo para saber os seus pontos fortes e áreas que necessita melhorar
           </button>
         </div>
       )}
